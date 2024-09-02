@@ -1,0 +1,34 @@
+package MyPackage;
+
+import jakarta.servlet.annotation.WebListener;
+import jakarta.servlet.http.HttpSessionActivationListener;
+import jakarta.servlet.http.HttpSessionEvent;
+
+/**
+ * Application Lifecycle Listener implementation class MyServletListner
+ *
+ */
+public class MyServletListner implements HttpSessionActivationListener {
+
+    /**
+     * Default constructor. 
+     */
+    public MyServletListner() {
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+     * @see HttpSessionActivationListener#sessionDidActivate(HttpSessionEvent)
+     */
+    public void sessionDidActivate(HttpSessionEvent se)  { 
+         // TODO Auto-generated method stub
+    }
+
+	/**
+     * @see HttpSessionActivationListener#sessionWillPassivate(HttpSessionEvent)
+     */
+    public void sessionWillPassivate(HttpSessionEvent se)  { 
+         // TODO Auto-generated method stub
+    }
+	
+}

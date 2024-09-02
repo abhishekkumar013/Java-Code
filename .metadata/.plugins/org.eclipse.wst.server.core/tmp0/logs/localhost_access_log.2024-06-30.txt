@@ -1,0 +1,9 @@
+127.0.0.1 - - [30/Jun/2024:08:42:09 +0530] "GET / HTTP/1.1" 404 752
+0:0:0:0:0:0:0:1 - - [30/Jun/2024:08:42:10 +0530] "GET /MyWebCalCulator/ HTTP/1.1" 404 772
+0:0:0:0:0:0:0:1 - - [30/Jun/2024:08:42:10 +0530] "GET /favicon.ico HTTP/1.1" 404 763
+127.0.0.1 - - [30/Jun/2024:08:43:36 +0530] "GET / HTTP/1.1" 404 752
+0:0:0:0:0:0:0:1 - - [30/Jun/2024:08:43:36 +0530] "GET /MyWebCalCulator/MyServlet HTTP/1.1" 200 27
+127.0.0.1 - - [30/Jun/2024:08:52:17 +0530] "GET / HTTP/1.1" 404 752
+0:0:0:0:0:0:0:1 - - [30/Jun/2024:08:52:18 +0530] "GET /MyWebCalCulator/MyServlet HTTP/1.1" 200 27
+0:0:0:0:0:0:0:1 - - [30/Jun/2024:08:52:26 +0530] "GET /MyWebCalCulator/myservlet HTTP/1.1" 200 27
+0:0:0:0:0:0:0:1 - - [30/Jun/2024:08:52:34 +0530] "GET /MyWebCalCulator/myservlet HTTP/1.1" 200 27

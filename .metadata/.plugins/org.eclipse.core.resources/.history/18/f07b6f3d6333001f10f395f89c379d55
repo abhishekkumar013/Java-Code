@@ -1,0 +1,31 @@
+package Dbconnect;
+
+import java.sql.Connection;
+import java.sql.Statement ;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+
+public class Main {
+    public static void main(String[] args) {
+        // Establish the connection
+        try {
+            String url = "jdbc:mysql://localhost:3306/Abhi";
+            String username = "root";
+            String password = "Abhi@9110";
+
+            Connection conn = DriverManager.getConnection(url, username, password);
+            System.out.println("Connection Successfully");
+
+            // Here you can create a statement and execute SQL queries
+            Statement stm=conn.createStatement();
+            String query="create database  AbhiWallah";
+            boolean bl= stm.execute(query);
+            System.out.println("Query Executed "+bl);
+            // Close the connection
+            conn.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}

@@ -1,0 +1,58 @@
+package MyPackage;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import java.io.IOException;
+
+/**
+ * Servlet implementation class MyServlet
+ */
+public class MyServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public MyServlet() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		String str1=request.getParameter("num1");
+		String str2=request.getParameter("num2"); 
+		int num1=Integer.parseInt(str1);
+		int num2=Integer.parseInt(str2);
+		
+		String btn=request.getParameter("bt1");
+		int btnVal=Integer.parseInt(btn);
+		int res;
+		switch (btnVal) {
+			case 1: res=num1+num2; break;
+			case 2: res=num1-num2; break;
+			case 3: res=num1*num2; break;
+			case 4: res=num1/num2; break;
+			default:
+				throw new IllegalArgumentException("Unexpected value: " + btnVal);
+		}
+		
+		
+		response.getWriter().append("Ans = "+res);
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+	}
+
+}
